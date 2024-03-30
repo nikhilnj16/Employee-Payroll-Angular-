@@ -1,0 +1,146 @@
+<!-- <app-header></app-header> -->
+<!-- <div mat-dialog-title>
+    <h1 class="payColor">Employee Payroll Form</h1>
+</div> -->
+<div>
+<form  [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-header">
+        <h1 class="payColor">Employee Payroll Form</h1>
+    </div>
+<div class="content">
+    <div class="row form-margin ">
+        <mat-label class="label-space">Name</mat-label>
+        <mat-form-field appearance="outline" >
+            <!-- <mat-label>First name</mat-label> -->
+            
+            <input matInput type="name" placeholder="Your Name..." formControlName="name">
+        </mat-form-field>
+        
+    </div>
+
+    <div class="row form-margin">
+        <mat-label class="label-space" for="profile">Profile image</mat-label>
+        <div>
+        <mat-radio-group ngDefaultControl aria-label="Select an option" formControlName="profilePic">
+            
+            <mat-radio-button class="profile-width" name="profile" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtnpssG8L1ph4mLETBqUOL_q2peB1D2WkTDQ&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtnpssG8L1ph4mLETBqUOL_q2peB1D2WkTDQ&s" height="30px" width="30px" />
+            </mat-radio-button>
+            <mat-radio-button class="profile-width" name="profile" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUgOVaMxsS2AzBufgmtt17DiDUGAdCAbWIxw&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUgOVaMxsS2AzBufgmtt17DiDUGAdCAbWIxw&s" height="30px" width="30px" />
+            </mat-radio-button>
+            <mat-radio-button class="profile-width" name="profile" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpUpNhftJV8xg0MbDaUIJaOsZpICoyUEvfwA&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpUpNhftJV8xg0MbDaUIJaOsZpICoyUEvfwA&s" height="30px" width="30px" />
+            </mat-radio-button>
+            <mat-radio-button class="profile-width" name="profile" value="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" height="40px" width="40px" />
+            </mat-radio-button>
+            
+          </mat-radio-group>
+        </div>
+    </div>
+
+    <div class="row form-margin">
+        <mat-label class="label-space" for="gender">Gender</mat-label>
+        <mat-radio-group ngDefaultControl aria-label="Select an option" formControlName="gender">
+            
+            <mat-radio-button value="male" name="gender">Male</mat-radio-button>
+            <mat-radio-button value="female" name="gender">Female</mat-radio-button>
+            
+        </mat-radio-group>
+    </div>
+
+    <div class="row form-margin">
+        <mat-label class="label-space" for="department">Department</mat-label>
+
+        <mat-radio-group ngDefaultControl aria-label="Select an option" formControlName="department">
+            
+            <mat-radio-button value="HR" name="department">Hr</mat-radio-button>
+            <mat-radio-button value="Sales" name="department">Sales</mat-radio-button>
+            <mat-radio-button value="Finance" name="department">Finance</mat-radio-button>
+            <mat-radio-button value="Engineer" name="department">Engineer</mat-radio-button>
+            <mat-radio-button value="Others" name="department">Others</mat-radio-button>
+            
+            
+        </mat-radio-group>
+
+        <!-- <div *ngFor="let department of departments">
+        <mat-checkbox class="checkbox" type="checkbox" [value]="department.value"
+        (change)="oncheckboxchange($event)" [checked]="department.checked">
+            <mat-label class="text">{{department.name}}</mat-label>
+        </mat-checkbox>
+        </div> -->
+    </div>
+
+
+    <div class="row form-margin">
+        <mat-label class="label-space text" for="salary">Salary</mat-label>
+        <mat-form-field appearance="outline">
+            <!-- <mat-label>Select Salary</mat-label> -->
+            <mat-select formControlName="salary">
+        
+                <mat-option *ngFor="let val of salary" [value]="val">{{val}}
+
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+    </div>
+
+    <div class="row form-margin">
+        <!-- <mat-form-field appearance="outline" >
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder=" Ex. test@gmail.com" formControlName="email">
+        </mat-form-field> -->
+        <mat-label class="label-space" for="startDate">Start Date</mat-label>
+        <mat-form-field >
+            <input matInput [matDatepicker]="picker" placeholder="choose a day" formControlName="startDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+
+
+    <div class="row form-margin">
+        <mat-label class="label-space">Notes</mat-label>
+        <mat-form-field  >
+            
+            <textarea matInput placeholder=" Ex. Write about Note" style="height: 100px" formControlName="note"></textarea>
+        </mat-form-field>
+        
+
+    </div>
+    
+
+    <!-- <div class="row form-margin">
+        <mat-form-field appearance="outline" >
+            <mat-label>Experience</mat-label>
+            <input matInput type="number" placeholder=" Ex. 3" formControlName="experience">
+        </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <mat-label>Package</mat-label>
+            <input matInput type="number" placeholder=" Ex. 12" formControlName="package">
+            <mat-hint>In rupees</mat-hint>
+        </mat-form-field>
+
+    </div> -->
+    
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'update': 'save'}}</button>
+</div>
+
+<!-- <div class="buttonParent">
+    <a routerLink="/home">
+        <button mat-raised-button color="accent" class="button cancelButton">Cancel</button>
+    </a>
+    <div class="submit-reset">
+        <button mat-raised-button type="submit" class="button submitButton">Submit</button>
+        <button mat-raised-button color="accent" type="reset" class="resetButton button">Reset</button>
+    </div>
+</div> -->
+
+</form>
+</div>

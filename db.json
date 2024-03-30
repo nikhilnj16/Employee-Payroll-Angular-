@@ -1,0 +1,121 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "id": "95b4",
+      "firstName": "dhamu",
+      "lastName": "raj",
+      "email": "nksnv@gmail.com",
+      "dob": "1994-07-09T18:30:00.000Z",
+      "gender": "male",
+      "education": "Graduate",
+      "company": "Tesla",
+      "experience": 9,
+      "package": 40
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Billings",
+      "email": "dvdv@gmail.vcom",
+      "dob": "2024-03-05T18:30:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "meta",
+      "experience": 3,
+      "package": 12,
+      "id": "3c10"
+    },
+    {
+      "id": "2c63",
+      "firstName": "praba",
+      "lastName": "kiran",
+      "email": "pra123@gmail.com",
+      "dob": "2016-07-17T18:30:00.000Z",
+      "gender": "male",
+      "education": "12th",
+      "company": "ant",
+      "experience": 5,
+      "package": 7.4
+    },
+    {
+      "id": "a3a2",
+      "firstName": "bharath",
+      "lastName": "raj",
+      "email": "bharath123@gmail.com",
+      "dob": "2017-06-19T18:30:00.000Z",
+      "gender": "male",
+      "education": "Graduate",
+      "company": "fincare",
+      "experience": 0.5,
+      "package": 6
+    }
+  ],
+  "emp": [
+    {
+      "id": "eea4",
+      "name": "madar",
+      "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtnpssG8L1ph4mLETBqUOL_q2peB1D2WkTDQ&s",
+      "gender": "female",
+      "department": "fdsv",
+      "salary": "30000",
+      "startDate": "2024-03-13T18:30:00.000Z",
+      "note": "hi"
+    },
+    {
+      "id": "c671",
+      "name": "sdvd",
+      "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtnpssG8L1ph4mLETBqUOL_q2peB1D2WkTDQ&s",
+      "gender": "male",
+      "department": "vcd",
+      "salary": "30000",
+      "startDate": "2024-03-05T18:30:00.000Z",
+      "note": "dfd"
+    },
+    {
+      "id": "8422",
+      "name": "jjj",
+      "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtnpssG8L1ph4mLETBqUOL_q2peB1D2WkTDQ&s",
+      "gender": "male",
+      "department": "hvhk",
+      "salary": "10000",
+      "startDate": "2024-03-12T18:30:00.000Z",
+      "note": "hi"
+    },
+    {
+      "id": "cd21",
+      "name": "regs",
+      "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUgOVaMxsS2AzBufgmtt17DiDUGAdCAbWIxw&s",
+      "gender": "female",
+      "department": "sdgsdf",
+      "salary": "80000",
+      "startDate": "2024-03-11T18:30:00.000Z",
+      "note": "sdfsdf"
+    }
+  ]
+}

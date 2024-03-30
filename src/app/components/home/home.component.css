@@ -1,0 +1,44 @@
+/* .example-spacer {
+    flex: 1 1 auto;
+} */
+.main-body{
+    padding-top: 20px;
+    max-width: 1248px;
+    margin: 0 auto;
+    mat-form-field{
+        width: 100%;
+    }
+}
+.empColor{
+    color: #82A70C;
+}
+.payColor{
+    color: #42515F;
+    font-weight: bold;
+}
+.table-color{
+    background-color: #42515F;
+}
+.align{
+    display: flex;
+    justify-content: space-between;
+
+}
+.button-align{
+    background: #82A70C 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    font: normal normal normal 22px Roboto;
+    color: #FFFFFF;
+    border-style: hidden;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+.action-button{
+    color: #658292;
+}
+.table-heading{
+    background-color: #42515F;
+}
+/* .search-element{
+    
+} */

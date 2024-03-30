@@ -1,0 +1,10 @@
+.empColor{
+    color: #82A70C;
+}
+.payColor{
+    color: #42515F;
+    font-weight: bold;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
